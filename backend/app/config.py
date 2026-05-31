@@ -34,7 +34,7 @@ class Settings:
     OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-4")
 
     # CORS
-    CORS_ORIGINS: list = os.getenv("CORS_ORIGINS", "https://deal-lens-gray.vercel.app,http://localhost:3000").split(",")
+    CORS_ORIGINS: list = ["*"]
 
     # Rate Limiting
     RATE_LIMIT_PER_MINUTE: int = int(os.getenv("RATE_LIMIT_PER_MINUTE", "10"))
